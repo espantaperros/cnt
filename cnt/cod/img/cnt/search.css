@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+#titulo_search{
+	font-family:Nimrod;
+	font-size:3em;
+	color:black;
+}
+#claves{
+	width:100%;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color:LightGray;
+}
+#claves input{
+	width:80%;
+	height:34px;
+	line-height:34px;
+	padding-left:10px;
+	margin:10px 30px 10px 100px;
+	border:1px solid #FF5053;
+	background-image:url(lupa.png);	
+	background-repeat:no-repeat;
+	background-position: 98% 50%;
+}
+#claves div#encontrados{
+	text-align:right;
+	padding-right:5%;
+	width:95%;	
+}
+#busqueda article{
+	margin-top:10px;
+	border-bottom:1px dotted LightGray;
+}
+#busqueda article h1{
+	border:none;
+}
+#busqueda article section{
+	overflow:hidden;
+	padding:0px;
+	width:100%;
+}
+#busqueda article section:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+#busqueda article figure{
+	display:block;
+	width:200px;
+	height:auto;
+	min-width:0;
+	float:left;
+	margin:5px 10px 5px 0;
+}
+#busqueda article figure img{
+	width:100%;
+}
+#busqueda article aside, #busqueda article div.descripcion{
+	display:block;
+	margin-bottom:10px;
+	margin-right:10px;
+	min-width:45%;
+}

@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+#contacto{
+	width:100%;
+}
+#contacto article{
+	width:49.5%;
+	margin-top:0.5vw;
+	margin-right:0;
+	padding-top:0.5vw;
+	float:left;
+	display:block;
+}
+#contacto article.izquierda{
+	margin-right:0.7%;
+	border-right:1px dotted black;
+}
+#contacto article h1{
+	padding:0;
+	margin:0;
+	width:100%;
+}
+#contacto article h1 a{
+	width:98%;
+	padding:1%;
+	background-color:#FF5053;
+	color:white;
+	display:block;
+}
+#contacto article a:hover{
+	color:black;
+}
+#contacto article div.descripcion{
+	display:block;
+	margin-bottom:0.5vw;
+}
+#contacto article div.embebido{
+	width:23.5vw;
+	height:13.21vw;
+	
+}
+@media (max-width: 800px) {
+#contacto article div.embebido{
+	width:30.4vw;
+	height:17vw;
+	
+}
+}
+/* ------------------------ repasar a partir de aquí ------------*/
+#formulario_contacto{
+	color:black;
+	background-color:#cccccc;
+	background-image:url(logoformulario.png);
+	background-repeat:no-repeat;
+	background-position: 0.5vw 4vw;;
+	height:100%;
+	overflow:hidden;
+}
+#formulario_contacto h1{
+	padding:0.5vw 0 0 0.5vw;
+	font-family:Nimrod;
+	font-size:1.5vw;
+}
+#formulario_contacto form{
+	margin-top:2vw;
+}
+#formulario_contacto label{
+	display:block;
+	float:left;
+	width:35%;
+	height:2vw;
+	line-height:2vw;
+	margin-bottom:0.5vw;
+	text-align:right;
+	font-weight:bold;
+	font-size:1vw;
+}
+#formulario_contacto input,#formulario_contacto textarea,#formulario_contacto img.captcha{
+	display:block;
+	float:left;
+	width:60%;
+	height:2vw;
+	margin-left:2%;
+	margin-bottom:0.5vw;
+}
+#formulario_contacto input{
+	height:2vw;	
+}
+#formulario_contacto textarea{
+	height:4vw;	
+}
+#formulario_contacto img.captcha{
+	margin-left:37.5%;
+	width:40%;
+	height:3vw;
+	background-color:black;
+}
+#formulario_contacto input.captcha{
+	width:40%;	
+}
+#formulario_contacto input.boton{
+	width:20%;
+	border:1px solid black;
+	background-color:#999999;
+	margin-left:57.5%;
+	height:2vw;
+	line-height:2vw;
+	font-weight:bold;
+	color:black;
+}
+#error_contacta{
+	padding-left:5%;
+	width:95%;
+	height:auto;
+	line-height:2vw;
+	color:red;
+	font-weight:bold;
+}

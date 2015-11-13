@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+/* Columna Triple */ 
+#triple{
+	top:10px;
+	width:100%;
+	height:auto;
+	display:block;
+}
+#triple article{
+	border-bottom:3px double grey;	
+}
+#triple article h1{
+	font-size:3.0em;
+	border-bottom:1px dotted LightGray;
+}
+#triple article section{
+	overflow:hidden;
+	padding:0px;
+	width:100%;
+}
+#triple article section:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+#triple article figure{
+	margin-right:0px;
+	margin-left:10px;
+	width:50%;
+	min-width:50%;
+	min-height:100px;
+	float:right;
+}
+#triple article aside, #triple article div.descripcion{
+	display:block;
+	margin-bottom:10px;
+	margin-right:10px;
+	min-width:45%;
+}

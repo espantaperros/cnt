@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+#agenda{
+	display:block;
+	width:100%;
+	margin-bottom:0.5vw;
+	padding-top:0.5vw;
+	background-color:#D3D3D3;
+}
+#agenda h1{
+	font-family:Nimrod;
+	font-size:1.2vw;
+	color:black;
+	width:99%;
+	padding-left:1%;	
+}
+#agenda_relacion{
+	padding:3%;
+	width:94%;
+	overflow-y:auto;
+}
+#agenda_relacion p.agenda_fecha{
+	margin:0;
+	cursor:pointer;
+	border-bottom:1px solid LightGray;
+	display:list-item;
+	width:97%;
+	margin-left:3%;
+}
+#agenda_relacion p.agenda_fecha:hover{
+	color:black;
+}
+#agenda_relacion p.agenda_detalle{
+	margin:0;
+	color:grey;
+}
+#agenda_relacion .agenda_date{
+	color:black;
+	font-weight:bold;
+	width:100%;
+	border-bottom:1px solid LightGray;
+	display:block;
+	margin-top:0.25vw;
+}
+#agenda_relacion .agenda_hora{
+	color:black;
+	display:block;
+}
+#agenda_relacion .agenda_titulo{
+	color:black;
+	font-weight:bold;
+}
+.agenda_detalle a{
+	color:black;
+	text-decoration:none;
+	display:block;
+}
+.agenda_detalle a:hover{
+	text-decoration:underline;
+}

@@ -1,0 +1,47 @@
+
+Options -Indexes
+
+php_value upload_max_filesize 64M
+php_value post_max_size 64M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+<IfModule mod_rewrite.c>
+
+Options +FollowSymLinks 
+# Activar RewriteEngine
+RewriteEngine on
+
+# Carpeta base
+RewriteBase /myra/cnt/
+
+# Aplicado para evitar conflictos con directorios y archivos existentes
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+#Seguridad /cod/* -> index.php
+DirectoryIndex index.php
+RewriteRule ^cod\/$ http://192.168.1.49/myra/cnt/portada [R=301,L]
+RewriteRule ^cod\/cfg$ http://192.168.1.49/myra/cnt/portada [R=301,L]
+RewriteRule ^cod\/ctrl$ http://192.168.1.49/myra/cnt/portada [R=301,L]
+RewriteRule ^cod\/mod$ http://192.168.1.49/myra/cnt/portada [R=301,L]
+RewriteRule ^cod\/lib$ http://192.168.1.49/myra/cnt/portada [R=301,L]
+RewriteRule ^cod\/mqt$ http://192.168.1.49/myra/cnt/portada [R=301,L]
+RewriteRule ^cod\/img$ http://192.168.1.49/myra/cnt/portada [R=301,L]
+
+#<nombreSeccion> -> index.php?ll=<nombreSeccion>
+RewriteRule ^(\w+)/?$ index.php?ll=$1 [NC,L]
+
+#<seccion>/<id>-<titulo> -> index.php?ll=<nombreSeccion>&id=<id>
+RewriteRule ^(\w+)\/([0-9]+)\-([a-zA-Z0-9-]*).html$ index.php?ll=$1&id=$2 [NC,L]
+
+#etiqueta/<nombreEtiqueta> -> index.php?tag=<nombreEtiqueta>
+RewriteRule ^tag\/([a-zA-Z0-9\ _-áÁéÉíÍóÓúÚñÑ]*)/?$ index.php?tag=$1 [NC,L]
+
+#sindicato/<autor> -> index.php?a=<autor>
+RewriteRule ^sindicato\/([a-zA-Z0-9-]*)/?$ index.php?a=$1 [NC,L]
+
+#busqueda/<palabrasSeparadasPorGuiones> -> index.php?search=<palabrasSeparadasPorGuiones>
+RewriteRule ^search\/([a-zA-Z0-9-]*)$ index.php?search=$1 [NC,L]
+
+</IfModule>
